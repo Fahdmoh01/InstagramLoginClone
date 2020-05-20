@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+ }
+#container{
+    display:flex;
+    flex:row;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+/*Global*/
+a{
+    text-decoration: none;
+}
+a:hover{
+cursor: pointer;
+}
+
+/*left*/
+#left{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    flex:1;
+  
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+
+/*images*/
+
+#login .logo img{
+    width:175px;
+    padding-left: 20px;
+}
+#fb-logo{
+    width:30px;
+}
+
+/*right*/
+#right{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    background:#FFFFFF;
+    height: 100vh;
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    width:50%;
+    padding-bottom: 1rem;
+    border:1px solid #DBDBDB;
+    margin-top:50px;
+    margin-left: 20px;
+
+}
+#login form{
+    padding-bottom: 2rem;
+    width:80%;
+    background: #FFFFFF;
+}
+#login .text-input{
+    margin-bottom: 1.3rem;
+    width:100%;
+    border-radius:1px;
+    background: #E8F0FE;
+    color:#000;
+    line-height: 2rem;
+    border:none;
+}
+
+#sign-up{
+    margin-top: 10px;
+    border:1px solid #DBDBDB;
+    width:50%;
+    height:63px;
+    text-align: center;
+    padding-top: 20px;
+    margin-left: 20px;
+}
+.Forgot-password{
+    margin-top: 20px;
+    font-size: 0.8rem;
+
+}
+/*Button*/
+#Login-btn{
+width: 100%;
+border:0;
+display: block;
+border-radius:2px;
+color:white;
+background: #0095F6;
+border-color:none;
+height: 2rem;
+text-align: center;
+cursor: pointer;
+text-decoration: none;
+}
+/*footer*/
+#footer-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin:auto;
+    max-width:1100px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.link-footer-box{
+    text-align: center;
+    max-width: 80%;
+}
+.link-footer{
+    margin-right: 10px;
+}
+/*MediaQueries*/
+@media(max-width:768px){
+body{
+    overflow:auto;
+}
+#left{
+    display: none;
+}
+#right{
+    height:85vh;
+    justify-content: start;
+    margin-top: 4vh;
+}
+#login{
+width:80%;
+}
+#sign-up{
+    width:80%;
+}
+#footer-container{
+max-width:600px;  
+font-size: 0.7rem; 
+
+}
+.right-col{
+    width:100%;
+    text-align: center;
+
+}
+.left-col{
+    width:100;
+    text-align: center;
+}
+}
